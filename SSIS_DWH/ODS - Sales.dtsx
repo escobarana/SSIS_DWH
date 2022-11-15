@@ -1,0 +1,3204 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/10/2022 2:33:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BENJAMIN-A"
+  DTS:CreatorName="BENJAMIN-A\bthev"
+  DTS:DTSID="{C24D9B83-7ED1-4AAA-AA55-8467B00CD1F3}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1036"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{A8711A50-AE7C-4EF4-B328-65A91C838A7D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DFT - Load Sales"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{39328597-1331-4041-bbb6-b30d4d11a1fd}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DFT - Load Sales"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\DFT - Load Sales\ALL - Erros"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Unir tout;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+              description="Combine des lignes de plusieurs flux de données sans effectuer de tri. Par exemple, rajoutez des lignes à un flux de données après correction des erreurs. Si le tri est important, nous recommandons l'utilisation de la transformation de fusion."
+              name="ALL - Erros"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1]"
+                  name="Unir tout entrée 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[OrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[EmployeeIdentifier]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeIdentifier"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[CustomerAccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[SubTotal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SubTotal"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[TotalCost]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TotalCost"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[Error_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Error_Date"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[Error_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Package"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[Error_Task]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Task"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[Error_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Error_Column"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1].Columns[Error_Message]"
+                      cachedDataType="wstr"
+                      cachedLength="294"
+                      cachedName="Error_Message"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[OrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[EmployeeIdentifier]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeIdentifier"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[CustomerAccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[SubTotal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SubTotal"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[TotalCost]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TotalCost"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[Error_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Error_Date"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[Error_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Package"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[Error_Task]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Task"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[Error_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Error_Column"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1].Columns[Error_Message]"
+                      cachedDataType="wstr"
+                      cachedLength="294"
+                      cachedName="Error_Message"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[OrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[EmployeeIdentifier]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeIdentifier"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[CustomerAccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[SubTotal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SubTotal"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[TotalCost]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TotalCost"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[Error_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Error_Date"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[Error_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Package"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Package]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[Error_Task]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Task"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Task]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[Error_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Error_Column"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2].Columns[Error_Message]"
+                      cachedDataType="wstr"
+                      cachedLength="294"
+                      cachedName="Error_Message"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3]"
+                  hasSideEffects="true"
+                  name="Entrée Union All 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[OrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[EmployeeIdentifier]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeIdentifier"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[CustomerAccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[SubTotal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SubTotal"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[TotalCost]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TotalCost"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[Error_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Error_Date"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[Error_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Package"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Package]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[Error_Task]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Task"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Task]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[Error_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Error_Column"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Column]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3].Columns[Error_Message]"
+                      cachedDataType="wstr"
+                      cachedLength="294"
+                      cachedName="Error_Message"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Message]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID de traçabilité de colonne de sortie"
+                          name="OutputColumnLineageID">#{Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Entrée Union All 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1]"
+                  name="Unir tout sortie 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderNumber]"
+                      name="OrderNumber" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[EmployeeIdentifier]"
+                      name="EmployeeIdentifier" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[TotalCost]"
+                      name="TotalCost" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorCode]"
+                      name="ErrorCode" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[ErrorColumn]"
+                      name="ErrorColumn" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]"
+                      name="Error_Date" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]"
+                      name="Error_Package" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]"
+                      name="Error_Task" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]"
+                      dataType="wstr"
+                      length="9"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]"
+                      name="Error_Column" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]"
+                      dataType="wstr"
+                      length="294"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]"
+                      name="Error_Message" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DER - Error Info (OrderDate)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - Error Info (OrderDate)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Inputs[Entrée de colonne dérivée].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      name="Error_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      name="Error_Package"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::PackageName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::PackageName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      name="Error_Task"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      name="Error_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"OrderDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"OrderDate"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="294"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      name="Error_Message"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"The value " + #{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]} + " is not a correct date format"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value " + OrderDate + " is not a correct date format"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DER - Error Info (ShipDate)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - Error Info (ShipDate)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Inputs[Entrée de colonne dérivée].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      name="Error_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      name="Error_Package"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::PackageName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::PackageName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      name="Error_Task"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      name="Error_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"ShipDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"ShipDate"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="294"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      name="Error_Message"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"The value " + #{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]} + " is not a correct date format"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value " + ShipDate + " is not a correct date format"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DER - Error Info (SubTotal)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - Error Info (SubTotal)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Inputs[Entrée de colonne dérivée].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      name="Error_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      name="Error_Package"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::PackageName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::PackageName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      name="Error_Task"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      name="Error_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"ShipDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"ShipDate"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="294"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      name="Error_Message"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"The value " + #{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]} + " is not a correct date format"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value " + ShipDate + " is not a correct date format"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DER - Error Info (TotalCost)"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonne dérivée;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Crée de nouvelles valeurs de colonne en appliquant des expressions aux colonnes d'entrée de transformation. Créez de nouvelles colonnes ou remplacez celles qui existent déjà. Par exemple, concaténez les valeurs de la colonne 'prénom' et de la colonne 'nom' pour créer une colonne 'nom complet'."
+              name="DER - Error Info (TotalCost)"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Inputs[Entrée de colonne dérivée]"
+                  description="Entrée de la transformation de colonnes dérivées"
+                  name="Entrée de colonne dérivée">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Inputs[Entrée de colonne dérivée].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée]"
+                  description="Sortie par défaut de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  name="Sortie de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Date]"
+                      name="Error_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Package]"
+                      name="Error_Package"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::PackageName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::PackageName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Task]"
+                      name="Error_Task"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">(DT_WSTR,255)@[System::TaskName]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_WSTR,255)@[System::TaskName]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Column]"
+                      name="Error_Column"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"ShipDate"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"ShipDate"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Calcul"
+                      errorRowDisposition="FailComponent"
+                      length="294"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée].Columns[Error_Message]"
+                      name="Error_Message"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression de colonne dérivée"
+                          name="Expression">"The value " + #{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]} + " is not a correct date format"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expression claire de colonne dérivée"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"The value " + ShipDate + " is not a correct date format"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie d'erreur de colonne dérivée]"
+                  description="Sortie d'erreur de la transformation de colonnes dérivées"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de colonne dérivée"
+                  synchronousInputId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Inputs[Entrée de colonne dérivée]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie d'erreur de colonne dérivée].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DNCV - Checking OrderDate type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Inputs[Entrée de conversion de données].Columns[OrderDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie de conversion de données].Columns[OrderDate_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie de conversion de données].Columns[OrderDate_DT]"
+                      name="OrderDate_DT"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DNCV - Checking ShipDate type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Inputs[Entrée de conversion de données].Columns[ShipDate]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ShipDate"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie de conversion de données].Columns[ShipDate_DT]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie de conversion de données].Columns[ShipDate_DT]"
+                      name="ShipDate_DT"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DNCV - Checking SubTotal type"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Inputs[Entrée de conversion de données].Columns[SubTotal]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="SubTotal"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie de conversion de données].Columns[SubTotal_NUM]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie de conversion de données].Columns[SubTotal_NUM]"
+                      name="SubTotal_NUM"
+                      precision="10"
+                      scale="4"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\DNCV - Checking TotalCost"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversion de données;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;0"
+              description="Conversion de données"
+              name="DNCV - Checking TotalCost"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Inputs[Entrée de conversion de données]"
+                  name="Entrée de conversion de données">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Inputs[Entrée de conversion de données].Columns[TotalCost]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TotalCost"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie de conversion de données]"
+                  exclusionGroup="1"
+                  name="Sortie de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie de conversion de données].Columns[TotalCost_NUM]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie de conversion de données].Columns[TotalCost_NUM]"
+                      name="TotalCost_NUM"
+                      precision="10"
+                      scale="4"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Spécifie la colonne d'entrée utilisée comme source de données pour la conversion."
+                          name="SourceInputColumnLineageID">#{Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indique si la colonne utilise les routines d'analyse les plus rapides, avec des paramètres régionaux neutres."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de conversion de données"
+                  synchronousInputId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Inputs[Entrée de conversion de données]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\OLE_DST - ODS Sales"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST - ODS Sales"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[Sales]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Connections[OleDbConnection]"
+                  connectionManagerID="{646F3F89-B73F-4D98-8B89-5612BEBDA9BF}:invalid"
+                  connectionManagerRefId="{646F3F89-B73F-4D98-8B89-5612BEBDA9BF}:invalid"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[CustomerAccountNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CustomerAccountNumber"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAccountNumber]"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[OrderNumber]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumber"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[OrderNumber]"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[OrderDate_DT]"
+                      cachedDataType="date"
+                      cachedName="OrderDate_DT"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[OrderDate]"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie de conversion de données].Columns[OrderDate_DT]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[ShipDate_DT]"
+                      cachedDataType="date"
+                      cachedName="ShipDate_DT"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[ShipDate]"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie de conversion de données].Columns[ShipDate_DT]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[EmployeeIdentifier]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="EmployeeIdentifier"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[EmployeeIdentifier]"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[SubTotal_NUM]"
+                      cachedDataType="numeric"
+                      cachedName="SubTotal_NUM"
+                      cachedPrecision="10"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[SubTotal]"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie de conversion de données].Columns[SubTotal_NUM]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].Columns[TotalCost_NUM]"
+                      cachedDataType="numeric"
+                      cachedName="TotalCost_NUM"
+                      cachedPrecision="10"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalCost]"
+                      lineageId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie de conversion de données].Columns[TotalCost_NUM]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[CustomerAccountNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[OrderNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[EmployeeIdentifier]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmployeeIdentifier" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[SubTotal]"
+                      dataType="numeric"
+                      name="SubTotal"
+                      precision="10"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB].ExternalColumns[TotalCost]"
+                      dataType="numeric"
+                      name="TotalCost"
+                      precision="10"
+                      scale="4" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="OLE_DST - Technical Rejects"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Technical_Rejects]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Connections[OleDbConnection]"
+                  connectionManagerID="{84C07117-7092-4123-9FA7-7FF4E581CF41}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[S22_ADM]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].Columns[Error_Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Error_Date"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Date]"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Date]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].Columns[Error_Package]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Package"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Package]"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Package]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].Columns[Error_Task]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Error_Task"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Task]"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Task]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].Columns[Error_Column]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="Error_Column"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Column]"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Column]" />
+                    <inputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].Columns[Error_Message]"
+                      cachedDataType="wstr"
+                      cachedLength="294"
+                      cachedName="Error_Message"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Message]"
+                      lineageId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1].Columns[Error_Message]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Date]"
+                      dataType="dbTimeStamp"
+                      name="Error_Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Package]"
+                      dataType="wstr"
+                      length="255"
+                      name="Error_Package" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Task]"
+                      dataType="wstr"
+                      length="255"
+                      name="Error_Task" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Column]"
+                      dataType="wstr"
+                      length="255"
+                      name="Error_Column" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB].ExternalColumns[Error_Message]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Error_Message" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\DFT - Load Sales\OLE_SRC - STA Sales"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="OLE_SRC - STA Sales"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Sales]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Connections[OleDbConnection]"
+                  connectionManagerID="{2B96DC35-9E54-4CAB-956C-C719B3695672}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[S22_STA]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[OrderNumber]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderNumber]"
+                      name="OrderNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[OrderDate]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[ShipDate]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[ShipDate]"
+                      name="ShipDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[EmployeeIdentifier]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[EmployeeIdentifier]"
+                      name="EmployeeIdentifier"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAccountNumber]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[SubTotal]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[SubTotal]"
+                      name="SubTotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[TotalCost]"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].Columns[TotalCost]"
+                      name="TotalCost"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[OrderNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrderNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[OrderDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[ShipDate]"
+                      dataType="wstr"
+                      length="255"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[EmployeeIdentifier]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmployeeIdentifier" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[EmployeeFirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmployeeFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[EmployeeLastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="EmployeeLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAccountNumber]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerAccountNumber" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerFirstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerFirstName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerLastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerLastName" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerAddr]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerAddr" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerCity]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerCity" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[CustomerCountry]"
+                      dataType="wstr"
+                      length="255"
+                      name="CustomerCountry" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[SubTotal]"
+                      dataType="wstr"
+                      length="255"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[TotalCost]"
+                      dataType="wstr"
+                      length="255"
+                      name="TotalCost" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[TaxAmount]"
+                      dataType="wstr"
+                      length="255"
+                      name="TaxAmount" />
+                    <externalMetadataColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB].ExternalColumns[FreightAmount]"
+                      dataType="wstr"
+                      length="255"
+                      name="FreightAmount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[OrderNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[OrderNumber]"
+                      name="OrderNumber" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[OrderDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ShipDate]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[EmployeeIdentifier]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[EmployeeIdentifier]"
+                      name="EmployeeIdentifier" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAccountNumber]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[CustomerAccountNumber]"
+                      name="CustomerAccountNumber" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[SubTotal]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalCost]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie d'erreur de source OLE DB].Columns[TotalCost]"
+                      name="TotalCost" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données]"
+              endId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Inputs[Entrée de colonne dérivée]"
+              name="Sortie d'erreur de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie d'erreur de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données1]"
+              endId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Inputs[Entrée de colonne dérivée]"
+              name="Sortie d'erreur de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie d'erreur de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données2]"
+              endId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Inputs[Entrée de colonne dérivée]"
+              name="Sortie d'erreur de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie d'erreur de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données3]"
+              endId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Inputs[Entrée de colonne dérivée]"
+              name="Sortie d'erreur de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie d'erreur de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée]"
+              endId="Package\DFT - Load Sales\ALL - Erros.Inputs[Unir tout entrée 1]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - Load Sales\DER - Error Info (OrderDate).Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée1]"
+              endId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 1]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - Load Sales\DER - Error Info (ShipDate).Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée2]"
+              endId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 2]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - Load Sales\DER - Error Info (SubTotal).Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée3]"
+              endId="Package\DFT - Load Sales\ALL - Erros.Inputs[Entrée Union All 3]"
+              name="Sortie de colonne dérivée"
+              startId="Package\DFT - Load Sales\DER - Error Info (TotalCost).Outputs[Sortie de colonne dérivée]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de conversion de données]"
+              endId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Inputs[Entrée de conversion de données]"
+              name="Sortie de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de conversion de données1]"
+              endId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Inputs[Entrée de conversion de données]"
+              name="Sortie de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking ShipDate type.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de conversion de données2]"
+              endId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Inputs[Entrée de conversion de données]"
+              name="Sortie de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking SubTotal type.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de conversion de données3]"
+              endId="Package\DFT - Load Sales\OLE_DST - ODS Sales.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de conversion de données"
+              startId="Package\DFT - Load Sales\DNCV - Checking TotalCost.Outputs[Sortie de conversion de données]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Sortie de source OLE DB]"
+              endId="Package\DFT - Load Sales\DNCV - Checking OrderDate type.Inputs[Entrée de conversion de données]"
+              name="Sortie de source OLE DB"
+              startId="Package\DFT - Load Sales\OLE_SRC - STA Sales.Outputs[Sortie de source OLE DB]" />
+            <path
+              refId="Package\DFT - Load Sales.Paths[Unir tout sortie 1]"
+              endId="Package\DFT - Load Sales\OLE_DST - Technical Rejects.Inputs[Entrée de destination OLE DB]"
+              name="Unir tout sortie 1"
+              startId="Package\DFT - Load Sales\ALL - Erros.Outputs[Unir tout sortie 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SQL - Empty ODS Sales"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="SQL - Empty ODS Employees"
+      DTS:DTSID="{3f428063-f00c-46cb-9cc1-0725e91bf64a}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SQL - Empty ODS Sales"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{483768CB-7243-4EC1-82DA-A5707C046152}"
+          SQLTask:SqlStatementSource="DELETE from SALES" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{893D6A6D-BB46-4F66-B046-F23810B34AC7}"
+      DTS:From="Package\SQL - Empty ODS Sales"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT - Load Sales" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,42.4"
+          Id="Package\DFT - Load Sales"
+          TopLeft="74.4999997019769,146.184212252044" />
+        <NodeLayout
+          Size="196,42.4"
+          Id="Package\SQL - Empty ODS Sales"
+          TopLeft="53.7500000931323,69.578947548721" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="153.791666564221,112.245614215388">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.9385980366564"
+              Start="0,0"
+              End="0,26.4385980366564">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.4385980366564" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\DFT - Load Sales">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="221.6,42.4"
+          Id="Package\DFT - Load Sales\OLE_DST - Technical Rejects"
+          TopLeft="937.499986030161,243.464916863325" />
+        <NodeLayout
+          Size="208,42.4"
+          Id="Package\DFT - Load Sales\DER - Error Info (SubTotal)"
+          TopLeft="455.833325878614,266.294742071223" />
+        <NodeLayout
+          Size="189.6,42.4"
+          Id="Package\DFT - Load Sales\OLE_SRC - STA Sales"
+          TopLeft="176.74999868994,43.1684210715011" />
+        <NodeLayout
+          Size="212,42.4"
+          Id="Package\DFT - Load Sales\DNCV - Checking TotalCost"
+          TopLeft="164.374997550622,339.298250482133" />
+        <NodeLayout
+          Size="232,42.4"
+          Id="Package\DFT - Load Sales\DNCV - Checking SubTotal type"
+          TopLeft="164.874997625127,271.517538489287" />
+        <NodeLayout
+          Size="212,42.4"
+          Id="Package\DFT - Load Sales\DER - Error Info (TotalCost)"
+          TopLeft="459.999992069271,394.8807086875" />
+        <NodeLayout
+          Size="216,42.4"
+          Id="Package\DFT - Load Sales\DER - Error Info (OrderDate)"
+          TopLeft="494.958327524985,118.540349572966" />
+        <NodeLayout
+          Size="233.6,42.4"
+          Id="Package\DFT - Load Sales\DNCV - Checking ShipDate type"
+          TopLeft="159.874998146668,194.236844114319" />
+        <NodeLayout
+          Size="209.6,42.4"
+          Id="Package\DFT - Load Sales\DER - Error Info (ShipDate)"
+          TopLeft="454.319439275605,192.982456209037" />
+        <NodeLayout
+          Size="190.4,42.4"
+          Id="Package\DFT - Load Sales\OLE_DST - ODS Sales"
+          TopLeft="176.24999737367,441.877199743703" />
+        <NodeLayout
+          Size="133.6,42.4"
+          Id="Package\DFT - Load Sales\ALL - Erros"
+          TopLeft="757.812488707714,244.210530630109" />
+        <NodeLayout
+          Size="238.4,42.4"
+          Id="Package\DFT - Load Sales\DNCV - Checking OrderDate type"
+          TopLeft="156.249997671694,122.105263724552" />
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données3]"
+          TopLeft="376.374997550622,360.498250482133">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.6249945186495,55.5824582053667"
+              Start="0,0"
+              End="76.1249945186495,55.5824582053667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.8124972593247,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="37.8124972593247,0"
+                    Point2="41.8124972593247,0"
+                    Point3="41.8124972593247,4" />
+                  <mssgle:LineSegment
+                    End="41.8124972593247,51.5824582053667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41.8124972593247,51.5824582053667"
+                    Point2="41.8124972593247,55.5824582053667"
+                    Point3="45.8124972593247,55.5824582053667" />
+                  <mssgle:LineSegment
+                    End="76.1249945186495,55.5824582053667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.6957449281753,-16.3349609375,183.016484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données2]"
+          TopLeft="396.874997625127,290.106140280255">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.9583282534866,0"
+              Start="0,0"
+              End="51.4583282534866,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="51.4583282534866,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-65.7790780607567,5,183.016484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données1]"
+          TopLeft="393.474998146668,214.809650161678">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.844441128937,0"
+              Start="0,0"
+              End="53.344441128937,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.344441128937,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-64.8360216230315,5,183.016484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie d'erreur de conversion de données]"
+          TopLeft="394.649997671694,141.522806648759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="100.308329853291,0"
+              Start="0,0"
+              End="92.8083298532913,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="92.8083298532913,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.1040772608544,5,183.016484375,10.3349609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Unir tout sortie 1]"
+          TopLeft="891.145822041047,265.17105708005">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46.3541639891142,0"
+              Start="0,0"
+              End="38.8541639891142,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.8541639891142,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de source OLE DB]"
+          TopLeft="273.499998180817,85.5684210715011">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.5368426530509"
+              Start="0,0"
+              End="0,29.0368426530509">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.0368426530509" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de conversion de données3]"
+          TopLeft="270.979164128813,381.9649171488">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9122825949037"
+              Start="0,0"
+              End="0,52.4122825949037">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4122825949037" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de conversion de données2]"
+          TopLeft="280.874997625127,314.184205155954">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.5000000745055,25.1140453261793"
+              Start="0,0"
+              End="-10.5000000745055,17.6140453261793">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.55702266308967" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.55702266308967"
+                    Point2="0,12.5570226630897"
+                    Point3="-4,12.5570226630897" />
+                  <mssgle:LineSegment
+                    End="-6.50000007450552,12.5570226630897" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.50000007450552,12.5570226630897"
+                    Point2="-10.5000000745055,12.5570226630897"
+                    Point3="-10.5000000745055,16.5570226630897" />
+                  <mssgle:LineSegment
+                    End="-10.5000000745055,17.6140453261793" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de conversion de données1]"
+          TopLeft="278.708331219231,236.903510780986">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.6140277083009"
+              Start="0,0"
+              End="0,27.1140277083009">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.1140277083009" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de conversion de données]"
+          TopLeft="276.062497909181,164.771930391218">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.4649137231011"
+              Start="0,0"
+              End="0,21.9649137231011">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.9649137231011" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée3]"
+          TopLeft="565.999992069271,394.8807086875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="258.612496638443,-108.270178057391"
+              Start="0,0"
+              End="258.612496638443,-100.770178057391">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-50.1350890286953" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-50.1350890286953"
+                    Point2="0,-54.1350890286953"
+                    Point3="4,-54.1350890286953" />
+                  <mssgle:LineSegment
+                    End="254.612496638443,-54.1350890286953" />
+                  <mssgle:CubicBezierSegment
+                    Point1="254.612496638443,-54.1350890286953"
+                    Point2="258.612496638443,-54.1350890286953"
+                    Point3="258.612496638443,-58.1350890286953" />
+                  <mssgle:LineSegment
+                    End="258.612496638443,-100.770178057391" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée2]"
+          TopLeft="663.833325878614,287.494742071223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.9791628291005,-16.3508781077804"
+              Start="0,0"
+              End="86.4791628291005,-16.3508781077804">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.3370432357345,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.3370432357345,0"
+                    Point2="54.3370432357345,0"
+                    Point3="54.3370432357345,-4" />
+                  <mssgle:LineSegment
+                    End="54.3370432357345,-12.3508781077804" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.3370432357345,-12.3508781077804"
+                    Point2="54.3370432357345,-16.3508781077804"
+                    Point3="58.3370432357345,-16.3508781077804" />
+                  <mssgle:LineSegment
+                    End="86.4791628291005,-16.3508781077804" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée1]"
+          TopLeft="663.919439275605,214.182456209037">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="93.893049432109,45.4947410877387"
+              Start="0,0"
+              End="86.393049432109,45.4947410877387">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.2872540352921,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.2872540352921,0"
+                    Point2="54.2872540352921,0"
+                    Point3="54.2872540352921,4" />
+                  <mssgle:LineSegment
+                    End="54.2872540352921,41.4947410877387" />
+                  <mssgle:CubicBezierSegment
+                    Point1="54.2872540352921,41.4947410877387"
+                    Point2="54.2872540352921,45.4947410877387"
+                    Point3="58.2872540352921,45.4947410877387" />
+                  <mssgle:LineSegment
+                    End="86.393049432109,45.4947410877387" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT - Load Sales.Paths[Sortie de colonne dérivée]"
+          TopLeft="602.958327524985,160.940349572966">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="221.654161182729,83.270181057143"
+              Start="0,0"
+              End="221.654161182729,75.770181057143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.6350905285715" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.6350905285715"
+                    Point2="0,41.6350905285715"
+                    Point3="4,41.6350905285715" />
+                  <mssgle:LineSegment
+                    End="217.654161182729,41.6350905285715" />
+                  <mssgle:CubicBezierSegment
+                    Point1="217.654161182729,41.6350905285715"
+                    Point2="221.654161182729,41.6350905285715"
+                    Point3="221.654161182729,45.6350905285715" />
+                  <mssgle:LineSegment
+                    End="221.654161182729,75.770181057143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Load Sales\OLE_SRC - STA Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Load Sales\OLE_DST - ODS Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT - Load Sales\OLE_DST - Technical Rejects">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

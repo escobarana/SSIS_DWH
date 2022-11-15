@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="S22_STA"
+  DTS:DTSID="{2B96DC35-9E54-4CAB-956C-C719B3695672}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=.;Initial Catalog=S22_STA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{2B96DC35-9E54-4CAB-956C-C719B3695672}LocalHost.S22_STA;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
