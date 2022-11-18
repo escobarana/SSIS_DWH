@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MSI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVZ6CRkxXX0aaWE47Tn4PuwAAAAACAAAAAAAQZgAAAAEAACAAAAAGbPV1959nBTEDPkdk1Nvqs0iKtt9B8tBJJHwI95VH5QAAAAAOgAAAAAIAACAAAADDKLChitHueBTCrnWcqTuWUzDhUx2XJmnsSZjyEu2fQZAAAACIKh70ZRtqDNEbjeG0lqiQIRRc/qwIZiGZTzF/+7QFLQNNpKcMooT1ZmcX1kKmfzSjvSKvd3M6ZgeJSy2UGEIctzVmljngN2MNtZmLj2ZDAwU2La+mfILMBee/z67+v+zHjwh0Y36u5bw0/hbE0c3y40sk7/YTixlRQTCPpC0l6D/5uQWQXU5C4vp3MmXmJ75AAAAAgyRFCmGVcv4FQ/JWw2s3T+1dm3WDz3q0EBjKAgue1JGgVPKDlrAHgs6hxDtTwGsL7OvI6n/XZCNQBdroWGpNBw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAVZ6CRkxXX0aaWE47Tn4PuwAAAAACAAAAAAAQZgAAAAEAACAAAAAiIMoG3uiwY62uwBds2y/nhwuTjnBe7VqMcLOVioErXAAAAAAOgAAAAAIAACAAAACo/psSBuqExmsHYoqAcDOpR/ZQ3qQHvijD770CC7pf1pAAAADsm8c01Oxtoq3zyc2eoggbH+KGTIATZO+9UMclfcLcRY5myX3BLHgGQCeXVAjFWNDGZ0wm9jwmdTomMN8MrbAzcBc0PE4n12xDyY+tzIZiVX6BmXPbxTUMf9kzwMcCXOrMgx1Zw+YI8CXFtKfCUJxLyCXzSP5mIDuvpAjTiMzIxO4fkmdQq+tYrr2LUOldAg9AAAAAzHMMuA1rsr6O0AWyAtTJQRDOsFl6uG2scjAbkuUS24dIFXfTKFFBsdneAgU3hlLcXYQj2Pl4NrKGTXFCC3gI3A==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -38,6 +38,8 @@
           <SSIS:Package SSIS:Name="ODS - Sales.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - DimEmployee.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DWH - DimCustomer.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DWH - FactSales.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Scheduler.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="S22_STA.conmgr" />
@@ -1693,8 +1695,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">
-                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1753,10 +1753,10 @@
                 <SSIS:Property SSIS:Name="Name">DWH - DimEmployee</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">18</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5C14B08E-EA9C-4235-B669-6E0E6FF1B56A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{E0644179-E5CF-4952-885C-9A6B8398B654}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1774,6 +1774,40 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{2E5C6455-6D63-4B6A-AE75-704278A44BCB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DWH - FactSales.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7083CCEE-AC24-4612-B5F9-0EA305512A03}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DWH - FactSales</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">60</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{544513CA-A322-418D-9C71-BB0852D2FF8E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Scheduler.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{DBDA6504-C546-453A-91EE-25705B03DB93}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Scheduler</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EB8099AE-C8D0-43EA-B929-585BCA0C19B3}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
